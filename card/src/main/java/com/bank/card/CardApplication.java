@@ -1,4 +1,4 @@
-package com.eazybytes.accounts;
+package com.bank.card;
 
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -11,11 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
-
 @OpenAPIDefinition(
 
 		info = @Info(
-				title="Account MicroService REST API Documentation"
+				title="Cards MicroService REST API Documentation"
 				,description = "Easy Bank Accounts Microservice REST API Documentation"
 				,version = "V1",
 
@@ -33,9 +32,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 				description = "Easy Bank Accounts Microservice Rest Api Documentation"
 		)
 )
-public class AccountsApplication {
+public class CardApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(AccountsApplication.class, args);
+		SpringApplication.run(CardApplication.class, args);
 	}
 
 }
