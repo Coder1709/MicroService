@@ -1,0 +1,45 @@
+services:
+  accounts:
+    image: "arpitop/accounts:s4"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 800m
+    networks:
+      - easybank
+
+
+
+  loans:
+    image: "arpitop/loans:s4"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 800m
+    networks:
+      - easybank
+
+
+  cards:
+    image: "arpitop/card:s4"
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 800m
+    networks:
+      - easybank
+
+
+
+networks:
+  easybank:
+    driver: "bridge"
